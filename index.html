@@ -51,15 +51,35 @@
 
         button.cardbutton {
             color: green;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0);
             border-color: green;
             border-radius: 6px;
             width: 100%;
+            border: 0px;
+            margin-top: 10px;
 
         }
 
-        button.searchbtn {}
-        
+        input {
+            border-radius: 5px;
+            border-color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.798);
+            margin: 1px;
+        }
+
+        div.setprice_qtd {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        button.searchbtn {
+            color: white;
+            background-color: rgb(103, 157, 103);
+            border: 0ch;
+            border-radius: 8px;
+
+        }
     </style>
 </head>
 
@@ -111,6 +131,7 @@
             <p id="NomeCliente">Nome</p>
         </div>
 
+        <!-- Adicionei uma div dentro dos cards com inputs para preço (alterar o .value no javascript) e para quantidade -->
 
         <div id="mainframe">
             <div class="card bg-light">
@@ -118,6 +139,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Prato 1</h5>
                     <p class="card-text">Descrição do prato 1.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
                     <button class="cardbutton">Selecionar</button>
                 </div>
             </div>
@@ -127,6 +152,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Prato 2</h5>
                     <p class="card-text">Descrição do prato 2.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
                     <button class="cardbutton">Selecionar</button>
                 </div>
             </div>
@@ -136,6 +165,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Prato 3</h5>
                     <p class="card-text">Descrição do prato 3.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
                     <button class="cardbutton">Selecionar</button>
                 </div>
             </div>
@@ -145,6 +178,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Prato 4</h5>
                     <p class="card-text">Descrição do prato 4.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
                     <button class="cardbutton">Selecionar</button>
                 </div>
             </div>
@@ -154,6 +191,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Prato 5</h5>
                     <p class="card-text">Descrição do prato 5.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
                     <button class="cardbutton">Selecionar</button>
                 </div>
             </div>
@@ -163,6 +204,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Prato 6</h5>
                     <p class="card-text">Descrição do prato 6.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
                     <button class="cardbutton">Selecionar</button>
                 </div>
             </div>
@@ -170,8 +215,12 @@
             <div class="card bg-light">
                 <img src="https://imgur.com/pZvBwv4.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Prato 6</h5>
-                    <p class="card-text">Descrição do prato 6.</p>
+                    <h5 class="card-title">Prato 7</h5>
+                    <p class="card-text">Descrição do prato 7.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
                     <button class="cardbutton">Selecionar</button>
                 </div>
             </div>
@@ -179,8 +228,77 @@
             <div class="card bg-light">
                 <img src="https://imgur.com/pZvBwv4.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Prato 6</h5>
-                    <p class="card-text">Descrição do prato 6.</p>
+                    <h5 class="card-title">Prato 8</h5>
+                    <p class="card-text">Descrição do prato 8.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
+                    <button class="cardbutton">Selecionar</button>
+                </div>
+            </div>
+
+            <div class="card bg-light">
+                <img src="https://imgur.com/pZvBwv4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Prato 9</h5>
+                    <p class="card-text">Descrição do prato 9.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
+                    <button class="cardbutton">Selecionar</button>
+                </div>
+            </div>
+
+            <div class="card bg-light">
+                <img src="https://imgur.com/pZvBwv4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Prato 10</h5>
+                    <p class="card-text">Descrição do prato 10.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
+                    <button class="cardbutton">Selecionar</button>
+                </div>
+            </div>
+
+            <div class="card bg-light">
+                <img src="https://imgur.com/pZvBwv4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Prato 11</h5>
+                    <p class="card-text">Descrição do prato 11.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
+                    <button class="cardbutton">Selecionar</button>
+                </div>
+            </div>
+
+            <div class="card bg-light">
+                <img src="https://imgur.com/pZvBwv4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Prato 12</h5>
+                    <p class="card-text">Descrição do prato 12.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
+                    <button class="cardbutton">Selecionar</button>
+                </div>
+            </div>
+
+            <div class="card bg-light">
+                <img src="https://imgur.com/pZvBwv4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Prato 13</h5>
+                    <p class="card-text">Descrição do prato 13.</p>
+                    <div class="setprice_qtd">
+                        <input type="text" placeholder="Preço" style="width: 50%;"> <input type="number"
+                            placeholder="Qtd" style="width: 50%;">
+                    </div>
                     <button class="cardbutton">Selecionar</button>
                 </div>
             </div>
