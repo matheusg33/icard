@@ -23,10 +23,18 @@
             width: 35vh;
             height: 35vh;
             border-radius: 100vh;
-            background-color: white;
+            background-color: rgb(93, 93, 93);
             animation-delay: 0ms;
-            animation-duration: 2s;
+            animation-duration: 3s;
             animation-name: FadeInput;
+
+        }
+
+        #enterbutton {
+            margin-top: 15px;
+            animation-name: Slideup;
+            animation-duration: 2s;
+            animation-delay: 0ms;
 
         }
 
@@ -34,7 +42,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-top: 5%;
+            margin-top: 3%;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -68,6 +76,9 @@
             margin: 10px;
             height: 40px;
             width: stretch;
+            animation-name: Slideup;
+            animation-duration: 2s;
+            animation-delay: 0ms;
         }
 
         h3 {
@@ -80,11 +91,22 @@
             from {
                 opacity: 0%;
             }
+
             to {
                 opacity: 100%;
             }
+
         }
 
+        @keyframes Slideup {
+            from {
+                margin-top: 100%;
+            }
+
+            to {
+                margin-top: 1.5%;
+            }
+        }
     </style>
 </head>
 
@@ -105,8 +127,10 @@
             <input type="text" placeholder="Nº da Mesa" style="width: 200px;">
         </div>
 
-        <div class="d-grid gap-2 col-3 mx-auto">  <!--botão entrar-->
-            <button onclick="entrar()" class="btn btn-outline-secondary">Entrar</button>
+        <div id="enterbutton" class="d-grid gap-2 col-3 mx-auto">
+            <!--  botão entrar  -->
+            <!-- Add um ID pra animação do botão -->
+            <button onload="entrar()" class="btn btn-outline-secondary">Entrar</button>
         </div>
 
     </section>
