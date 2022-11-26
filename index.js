@@ -1,7 +1,9 @@
 function entrar() {
-    var a = document.getElementById("Nome")
+    var nome = document.getElementById("Nome").value
 
-        if(a.value == ""){
+        if((nome == "") || (nome == " ")){
             alert("Nome não informado!")
+        }else{
+            window.location.href = "cardapio.html?name=" + nome
         }
 }
