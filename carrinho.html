@@ -139,16 +139,14 @@
             <p>Sua Lista</p>
         </div>
         <div class="table1">
-        <table>
-            <tr style="text-align:center">
+        <table id="carrinho">
+            <thead style="text-align:center">
                 <td><h5>Produto</h5></td>
+                <td><h5>Quantidade</h5></td>
                 <td><h5>Valor</h5></td>
-            </tr>
-            <tr style="text-align:center">
-                <td>item1</td>
-                <td>Valor1</td>
-                <td><button>Remover</button></td>
-            </tr>
+            </thead>
+            <tbody style="text-align:center">
+            </tbody>
            
         </table>
         
@@ -164,12 +162,8 @@
 
     </section>
 
-    <!-- <script>
-        const queryString = window.location.search; //pegando todos os parametros da url
-        const urlParams = new URLSearchParams(queryString); //criando objeto pra cada parametro
-        const name = urlParams.get('name');
-        document.getElementById("name").innerHTML = name
-    </script> -->
+    <script src="index.js">
+    </script>
 
 </body>
 
