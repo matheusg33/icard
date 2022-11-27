@@ -11,6 +11,9 @@
     <style>
         #mainframe {
             overflow: auto;
+            animation-name: Fade;
+            animation-duration: 500ms;
+            animation-delay: 0ms;
         }
 
         #text {
@@ -29,13 +32,17 @@
         
         div.table1 {
             animation-name: Fade;
-            animation-duration: s;
+            animation-duration: 2s;
             animation-delay: 0ms;
+            
         }
         table {
+            animation-name: Slideup;
+            animation-delay: 0ms;
+            animation-duration: 400ms;
             background-color: rgb(255, 254, 244);
             margin-bottom: 10px;
-            border-radius: 10px;
+            border-radius: 3px;
             text-align: center;
             margin-left: auto;
             margin-right: auto;
@@ -74,6 +81,12 @@
                 
             }
         }
+        @keyframes Slideup {
+            from {
+                margin-top: 100%;
+            }
+            to {margin-top: 0%;}
+        }
 
     </style>
 </head>
@@ -92,8 +105,7 @@
                 queria no design, então deixei ele aí nessa div mesmo. Sem Id nem nada -->
                     <a href="./cardapio.html"><button class="btn btn-outline-secondary">Voltar ao cardápio</button></a>
                     <button id="endList" class="btn btn-outline-secondary"
-                        style="color: white; background-color: rgb(35, 155, 35);">Finalizar
-                        Pedido</button>
+                        style="color: white; background-color: rgb(35, 155, 35);">Pagamento</button>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -112,9 +124,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./carrinho.html">Carrinho</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pagamento</a>
                         </li>
                     </ul>
                 </div>
