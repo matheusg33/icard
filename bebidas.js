@@ -5,9 +5,11 @@ function additem(id) {
     var qtd = Number(document.getElementById(`qtd_${id}`).value)
     var valor = parseFloat(document.getElementById(`price_${id}`).value).toFixed(2)
 
-
+    //if(qtd.value == true){
     console.log(itens)
     itens.push({"nome": nome, "qtd": qtd, "valor": valor})
 
     localStorage.setItem("itens", JSON.stringify(itens))
+    //}
+    //else alert("Informe a quantidade, por favor")
 }
