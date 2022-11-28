@@ -41,8 +41,7 @@ function remover(nome){
     var itens_filtrados = itens.filter(function (item){
         return item.nome != nome
     })
-    console.log(itens_filtrados)
-    
+
     localStorage.removeItem("itens")
     localStorage.setItem("itens", JSON.stringify(itens_filtrados))
     var tabela = document.getElementById("carrinho").innerHTML = ''
