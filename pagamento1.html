@@ -44,6 +44,10 @@
         }
 
         div.card {
+            animation-name: Fade;
+            animation-name: Slideup;
+            animation-delay: 0ms;
+            animation-duration: 1s;
             margin: auto;
             margin-bottom: 20px;
             max-width: 170px;
@@ -88,6 +92,21 @@
             border: 0ch;
             border-radius: 8px;
 
+        }
+        @keyframes Fade {
+            from{
+                opacity: 0%;
+            }
+            to {
+                opacity: 100%;;
+                
+            }
+        }
+        @keyframes Slideup {
+            from {
+                margin-top: 100%;
+            }
+            to {margin-top: 0%;}
         }
     </style>
 </head>
