@@ -1,20 +1,21 @@
 function exec_card(){
-    
-    console.log("executando auto function")
+
     var itens = JSON.parse(localStorage.getItem("itens"))
     console.log(itens)
     var tabela = document.getElementById("carrinho")
     var total_price = 0
+    var id = 0
 
     itens.forEach(element => {
-        pula_tbl_carrinho(tabela, element.nome, element.qtd, element.valor)
-        total_price = parseFloat(total_price) + parseFloat(element.valor)
+        pula_tbl_carrinho(tabela, id, element.nome, element.qtd, element.valor)
+        id += 1
+        total_price = parseFloat(total_price) + (parseFloat(element.valor) * (element.qtd))
     });
 
     document.getElementById("total_price").innerHTML = `R$${total_price.toFixed(2)}`
 }
 
-function pula_tbl_carrinho(tabela, nome, qtd, valor) {
+function pula_tbl_carrinho(tabela, id, nome, qtd, valor) {
 
     var coluna1 = document.createElement('td')
     var coluna2 = document.createElement('td')
@@ -24,10 +25,11 @@ function pula_tbl_carrinho(tabela, nome, qtd, valor) {
 
     valor = valor * qtd
 
+    coluna0.innerHTML = `${id}`
     coluna1.innerHTML = `${nome}`
     coluna2.innerHTML = `${qtd}`
     coluna3.innerHTML = `R$ ${valor.toFixed(2)}`
-    coluna4.innerHTML = 'remover'
+    coluna4.innerHTML = "<button class='remove-btn' onclick='remover(id)'>Remover</button>"
 
     linha.appendChild(coluna1)
     linha.appendChild(coluna2)
@@ -36,7 +38,18 @@ function pula_tbl_carrinho(tabela, nome, qtd, valor) {
     tabela.appendChild(linha)
 }
 
+function remover(id){
+	var itens = JSON.parse(localStorage.getItem('itens'));
 
+	for(var i = 0; i < itens.length; i++)
+		if(itens[i].Id == id)
+			itens.splice(i, 1);
+
+	localStorage.setItem('itens', JSON.stringify(itens));
+	//se nao possuir mais nenhum registro, limpar o storage
+	//if(pessoas.length == 0)
+		//window.localStorage.removeItem("value");
+}
 
 exec_card() //sempre ultima linha
-
+//remover(id)
