@@ -16,8 +16,5 @@ function additem(id) {
 }
 
 function finalizar_ped(){
-    if(itens == null)
-        alert("Seu carrinho está vazio. Selecione produtos")
-
     window.location.href = "carrinho.html"
 }
