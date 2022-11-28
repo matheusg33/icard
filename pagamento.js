@@ -4,7 +4,7 @@ function pagamento (forma_pagmt){
     var debito = window.document.getElementById("debito").value
     var credito = window.document.getElementById("credito").value
 
-    window.location.href = "pagamento2.html?forma_pagmt" + forma_pagmt
+    window.location.href = "pagamento2.html?forma_pagmt=" + forma_pagmt
 }
 
 function exec_card(){
@@ -15,7 +15,7 @@ function exec_card(){
     itens.forEach(element => {
         total_price = parseFloat(total_price) + (parseFloat(element.valor) * (element.qtd))
     });
-    document.getElementById("copy").innerHTML = `R$${total_price.toFixed(2)}`
+    document.getElementById("copy").innerHTML = `R$ ${total_price.toFixed(2)}`
 }
 
 exec_card()
