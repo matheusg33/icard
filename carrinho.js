@@ -26,7 +26,7 @@ function pula_tbl_carrinho(tabela, nome, qtd, valor) {
     coluna1.innerHTML = `${nome}`
     coluna2.innerHTML = `${qtd}`
     coluna3.innerHTML = `R$ ${valor.toFixed(2)}`
-    coluna4.innerHTML = "<button class='remove-btn' onclick='remover()'>Remover</button>"
+    coluna4.innerHTML = `<button class='remove-btn' onclick='remover("${nome}")'>Remover</button>`
 
     linha.appendChild(coluna1)
     linha.appendChild(coluna2)
@@ -35,16 +35,19 @@ function pula_tbl_carrinho(tabela, nome, qtd, valor) {
     tabela.appendChild(linha)
 }
 
-function remover(){
+function remover(nome){
 
 	var itens = JSON.parse(localStorage.getItem('itens'));
+    var itens_filtrados = itens.filter(function (item){
+        return item.nome != nome
+    })
+    console.log(itens_filtrados)
+    
+    localStorage.removeItem("itens")
+    localStorage.setItem("itens", JSON.stringify(itens_filtrados))
+    var tabela = document.getElementById("carrinho").innerHTML = ''
 
-	delete itens.nome
-    delete itens.qtd
-    delete itens.valor
-
-	//localStorage.setItem('itens', JSON.stringify(itens));
-    console.log(itens)
+    exec_card()
 }
 
 exec_card() //sempre ultima linha
