@@ -39,9 +39,12 @@ function remover(){
 
 	var itens = JSON.parse(localStorage.getItem('itens'));
 
-	for(var i = 0; i < itens.length; i++)
-        itens.remover()
-	localStorage.setItem('itens', JSON.stringify(itens));
+	delete itens.nome
+    delete itens.qtd
+    delete itens.valor
+
+	//localStorage.setItem('itens', JSON.stringify(itens));
+    console.log(itens)
 }
 
 exec_card() //sempre ultima linha
