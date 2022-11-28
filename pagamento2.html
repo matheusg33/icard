@@ -126,13 +126,13 @@
                 img = "./credito.png"
             break
         }
-        console.log(img)
+        //console.log(img)
     </script>
 
     <header>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                
+
                 <a href="./pagamento1.html"><button class="btn btn-outline-secondary">Voltar</button></a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -162,7 +162,7 @@
     </header>
     <section class="p-3 mb-2 text-dark" style="background-color: rgba(237, 237, 237, 0.847) ;">
         <div id="text">
-            <p>Confirme o método de pagamento</p>
+            <p>Método de pagamento escolhido</p>
         </div>
          <div class="mainframe">
             <div style="width: 50%;">
@@ -170,22 +170,19 @@
                 <div class="card-body">
                     <div>
                         <script>
-                            document.write("<img src='"+img+"' height='140vh' width='130vh'>")
+                            document.write("<img src='"+ img +"' height='140vh' width='130vh'>")
                         </script>
                     </div>
                 </div>
             </div>
             </div>
-            <div style="width: 50%;">
+            <div style="width: 50%; margin-top: 5px;">
                 <table>
                     <tr>
                         <td<h1>Valor Total:</h1></td>
-                        <td id="copy"><h1></h1></td>
+                        <td id="copy"></td>
                     </tr>
                     <tr>
-                        <td>
-                            <a href="./carrinho.html"><button class="btn btn-outline-secondary">Ver Itens</button></a>
-                        </td>
                         <td>
                             <a href="./Tela Final.html"><button class="btn btn-outline-secondary">Confirmar</button></a>
                         </td>
