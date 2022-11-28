@@ -25,11 +25,10 @@ function pula_tbl_carrinho(tabela, id, nome, qtd, valor) {
 
     valor = valor * qtd
 
-    coluna0.innerHTML = `${id}`
     coluna1.innerHTML = `${nome}`
     coluna2.innerHTML = `${qtd}`
     coluna3.innerHTML = `R$ ${valor.toFixed(2)}`
-    coluna4.innerHTML = "<button class='remove-btn' onclick='remover(id)'>Remover</button>"
+    coluna4.innerHTML = "<button class='remove-btn' onclick='remover()'>Remover</button>"
 
     linha.appendChild(coluna1)
     linha.appendChild(coluna2)
@@ -38,8 +37,9 @@ function pula_tbl_carrinho(tabela, id, nome, qtd, valor) {
     tabela.appendChild(linha)
 }
 
-function remover(id){
-	var itens = JSON.parse(localStorage.getItem('itens'));
+function remover(){
+    document.getElementById("carrinho").innerHTML = ''
+	/*var itens = JSON.parse(localStorage.getItem('itens'));
 
 	for(var i = 0; i < itens.length; i++)
 		if(itens[i].Id == id)
@@ -48,8 +48,7 @@ function remover(id){
 	localStorage.setItem('itens', JSON.stringify(itens));
 	//se nao possuir mais nenhum registro, limpar o storage
 	//if(pessoas.length == 0)
-		//window.localStorage.removeItem("value");
+		//window.localStorage.removeItem("value");*/
 }
 
 exec_card() //sempre ultima linha
-//remover(id)
