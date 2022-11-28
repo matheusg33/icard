@@ -132,13 +132,14 @@
         <div id="text">
             <p>Escolha o método de pagamento</p>
         </div>
+
          <div class="mainframe" id="mainframe">
             <div class="card bg-light">
-                
+
                 <div class="card-body">
                     <div style="margin: auto;">
                         <img src="./Dinheiro.png" height="140vh" width="140vh">
-                        <button id="dinheiro" onclick="pagamento ()" class="cardbutton">Dinheiro</button>
+                        <button id="dinheiro" onclick="pagamento('dinheiro')" class="cardbutton">Dinheiro</button>
                     </div>
                 </div>
             </div>
@@ -148,7 +149,7 @@
                 <div class="card-body">
                     <div style="margin: auto;">
                         <img src="./pix.png" height="140vh" width="140vh">
-                        <button id="pix" onclick="pagamento ()" class="cardbutton">Pix</button>
+                        <button id="pix" onclick="pagamento('pix')" class="cardbutton">Pix</button>
                     </div>
                 </div>
             </div>
@@ -158,7 +159,7 @@
                 <div class="card-body">
                     <div style="margin: auto;">
                         <img src="./debito.png" height="140vh" width="140vh">
-                        <button id="debito" onclick="pagamento ()" class="cardbutton">Cartão de Débito</button>
+                        <button id="debito" onclick="pagamento('debito')" class="cardbutton">Cartão de Débito</button>
                     </div>
                 </div>
             </div>
@@ -168,18 +169,14 @@
                 <div class="card-body">
                     <div style="margin: auto;">
                         <img src="./credito.png" height="140vh" width="140vh">
-                        <button id="credito" onclick="pagamento ()" class="cardbutton">Cartão de Crédito</button>
+                        <button id="credito" onclick="pagamento('credito')" class="cardbutton">Cartão de Crédito</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        const queryString = window.location.search; //pegando todos os parametros da url
-        const urlParams = new URLSearchParams(queryString); //criando objeto pra cada parametro
-        const name = urlParams.get('name');
-        document.getElementById("name").innerHTML = name
+    <script src="pagamento.js">
     </script>
 
 </body>
