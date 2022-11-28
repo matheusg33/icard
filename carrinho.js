@@ -4,18 +4,16 @@ function exec_card(){
     console.log(itens)
     var tabela = document.getElementById("carrinho")
     var total_price = 0
-    var id = 0
 
     itens.forEach(element => {
-        pula_tbl_carrinho(tabela, id, element.nome, element.qtd, element.valor)
-        id += 1
+        pula_tbl_carrinho(tabela, element.nome, element.qtd, element.valor)
         total_price = parseFloat(total_price) + (parseFloat(element.valor) * (element.qtd))
     });
 
     document.getElementById("total_price").innerHTML = `R$${total_price.toFixed(2)}`
 }
 
-function pula_tbl_carrinho(tabela, id, nome, qtd, valor) {
+function pula_tbl_carrinho(tabela, nome, qtd, valor) {
 
     var coluna1 = document.createElement('td')
     var coluna2 = document.createElement('td')
@@ -38,17 +36,12 @@ function pula_tbl_carrinho(tabela, id, nome, qtd, valor) {
 }
 
 function remover(){
-    document.getElementById("carrinho").innerHTML = ''
-	/*var itens = JSON.parse(localStorage.getItem('itens'));
+
+	var itens = JSON.parse(localStorage.getItem('itens'));
 
 	for(var i = 0; i < itens.length; i++)
-		if(itens[i].Id == id)
-			itens.splice(i, 1);
-
+        itens.remover()
 	localStorage.setItem('itens', JSON.stringify(itens));
-	//se nao possuir mais nenhum registro, limpar o storage
-	//if(pessoas.length == 0)
-		//window.localStorage.removeItem("value");*/
 }
 
 exec_card() //sempre ultima linha
