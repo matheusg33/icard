@@ -16,6 +16,9 @@
             flex-direction: row;
             flex-wrap: wrap;
             align-self: center;
+            animation-name: Fade;
+            animation-duration: 500ms;
+            animation-delay: 0ms;
 
         }
 
@@ -34,6 +37,9 @@
         nav.navbar {
             margin: 15px;
             border-radius: 10px;
+            animation-name: Fade;
+            animation-duration: 500ms;
+            animation-delay: 0ms;
         }
 
 
@@ -89,6 +95,15 @@
             border: 0ch;
             border-radius: 8px;
 
+        }
+        @keyframes Fade {
+            from{
+                opacity: 0%;
+            }
+            to {
+                opacity: 100%;;
+                
+            }
         }
     </style>
 </head>
