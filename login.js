@@ -1,4 +1,3 @@
-
 function entrar() {
     var nome = document.getElementById("Nome").value
     var mesa = document.getElementById("Mesa").value
