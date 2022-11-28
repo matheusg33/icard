@@ -16,7 +16,9 @@ function additem(id) {
     }
 }
 
-
+function finalizar_ped(){
+    window.location.href = "carrinho.html"
+}
 
 
 
