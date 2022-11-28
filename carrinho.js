@@ -10,7 +10,7 @@ function exec_card(){
         total_price = parseFloat(total_price) + (parseFloat(element.valor) * (element.qtd))
     });
 
-    document.getElementById("total_price").innerHTML = `R$${total_price.toFixed(2)}`
+    document.getElementById("total_price").innerHTML = `R$ ${total_price.toFixed(2)}`
 }
 
 function pula_tbl_carrinho(tabela, nome, qtd, valor) {
