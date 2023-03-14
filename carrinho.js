@@ -13,6 +13,11 @@ function exec_card(){
     document.getElementById("total_price").innerHTML = `R$ ${total_price.toFixed(2)}`
 }
 
+function verify_card(valor){
+    if(document.getElementById("total_price").innerHTML == '')
+        alert("atenção")
+}
+
 function pula_tbl_carrinho(tabela, nome, qtd, valor) {
 
     var coluna1 = document.createElement('td')
